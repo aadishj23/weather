@@ -1,11 +1,16 @@
 import React from 'react'
-
+import { useWeather } from '../context/Weather'
 export default function Card() {
+  const {data}= useWeather();
   return (
-    <div className="Card"> 
-      <img src="myPic.png" alt="" />
-      <h2>32 deg C</h2>
-      <h5>London, City of London, Greater London</h5>
+    <div className="Card">
+      {data && (
+        <div> 
+          <h2>{data.location.name}, {data.location.country}</h2>
+          <p>Temperature: {data.current.temp_c}°C</p>
+          <p>Condition: {data.current.condition.text}</p>
+        </div>)
+      }
     </div>
   )
 }
