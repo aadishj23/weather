@@ -4,7 +4,6 @@ import Card from "./components/Card";
 import Input from "./components/Input";
 import Button from "./components/Button";
 import { WeatherContext } from './context/Weather';
-// import { Api } from './api';
 
 function App() {
   const [data, setData]  = React.useState("");
@@ -30,18 +29,10 @@ function App() {
   useEffect(() => {
     fetchWeatherData();
   }, [searchCity]);
+
   const handleFetchWeather = () => {
-    fetchWeatherData(); // Call the function to fetch weather data when the button is clicked
+    fetchWeatherData(); 
   };
-  // async function Api(){
-  //       const baseUrl = "https://api.weatherapi.com/v1/current.json?key=06f4e1bf307345b390e65518242904"
-  //       console.log("api on");
-  //       console.log("City is", searchCity)
-  //       const response = await fetch(`${baseUrl}&q=${searchCity}&aqi=no`);
-  //       const data= await response.json()
-  //       // setData(data)
-  //       console.log(data)
-  //   }
 
   return (
     <div className="App">
