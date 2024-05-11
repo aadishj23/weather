@@ -1,7 +1,7 @@
 import { createContext , useContext, useState} from "react";
 // import {getWeather} from "../api/index";
 
-const WeatherContext = createContext(null);
+const WeatherContext = createContext();
 
 export const useWeather = () => {
     return useContext(WeatherContext);
