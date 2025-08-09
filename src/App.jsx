@@ -11,7 +11,7 @@ function App() {
   const fetchWeatherData = async () => {
     try {
       if (searchCity.trim() !== '') {
-        const baseUrl = "https://api.weatherapi.com/v1/current.json?key=06f4e1bf307345b390e65518242904"
+        const baseUrl = `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_API_KEY}`
         const response = await fetch(`${baseUrl}&q=${searchCity}`);
         if (!response.ok) {
           throw new Error('Failed to fetch weather data');
