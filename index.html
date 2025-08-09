@@ -2,12 +2,110 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TempTrack</title>
-  </head>
+    
+    <!-- Primary Meta Tags -->
+    <title>TempTrack - Real-Time Weather Forecast & Current Conditions</title>
+    <meta name="title" content="TempTrack - Real-Time Weather Forecast & Current Conditions" />
+    <meta name="description" content="Get accurate, real-time weather information for any city worldwide. Check current temperature, humidity, wind speed, UV index, and detailed weather conditions with our beautiful, responsive weather app." />
+    <meta name="keywords" content="weather, forecast, temperature, humidity, wind, weather app, real-time weather, current conditions, weather API, meteorology" />
+    <meta name="author" content="TempTrack Weather App" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://temptrack-weather.vercel.app/" />
+    <meta property="og:title" content="TempTrack - Real-Time Weather Forecast & Current Conditions" />
+    <meta property="og:description" content="Get accurate, real-time weather information for any city worldwide. Check current temperature, humidity, wind speed, UV index, and detailed weather conditions." />
+    <meta property="og:image" content="https://temptrack-weather.vercel.app/og-image.png" />
+    <meta property="og:site_name" content="TempTrack" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://temptrack-weather.vercel.app/" />
+    <meta property="twitter:title" content="TempTrack - Real-Time Weather Forecast & Current Conditions" />
+    <meta property="twitter:description" content="Get accurate, real-time weather information for any city worldwide. Check current temperature, humidity, wind speed, UV index, and detailed weather conditions." />
+    <meta property="twitter:image" content="https://temptrack-weather.vercel.app/og-image.png" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="msapplication-TileColor" content="#3B82F6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="TempTrack" />
+    
+    <!-- Additional SEO -->
+    <meta name="application-name" content="TempTrack" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://temptrack-weather.vercel.app/" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://api.weatherapi.com" />
+    <link rel="dns-prefetch" href="https://api.weatherapi.com" />
+    
+    <!-- Manifest and PWA support -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="mask-icon" href="/logo192.png" color="#3B82F6" />
+    
+    <!-- Performance optimizations -->
+    <link rel="preload" href="/src/main.jsx" as="script" />
+    <link rel="modulepreload" href="/src/main.jsx" />
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "TempTrack",
+      "description": "Real-time weather forecast and current conditions for any city worldwide",
+      "url": "https://temptrack-weather.vercel.app/",
+      "applicationCategory": "WeatherApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "TempTrack"
+      },
+      "featureList": [
+        "Real-time weather data",
+        "Current temperature and conditions",
+        "Humidity and wind information",
+        "UV index and pressure data",
+        "Weather alerts and warnings",
+        "Dark and light theme support",
+        "Responsive design for all devices"
+      ]
+    }
+    </script>
   <body>
-    <div id="root"></div>
+    <div id="root" role="main" aria-label="Weather Application"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Performance monitoring -->
+    <script>
+      // Performance monitoring
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        });
+      }
+    </script>
   </body>
 </html>
